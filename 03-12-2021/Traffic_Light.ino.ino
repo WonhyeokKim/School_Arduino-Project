@@ -24,6 +24,6 @@ void loop() {
   second(2);
 }
 
-int second(int getDelay) {
-  return delay(getDelay * 1000);
+void second(int getDelay) {
+  delay(getDelay * 1000);
 }
