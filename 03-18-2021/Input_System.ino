@@ -18,11 +18,21 @@ void setup() {
 
 void loop() {
     if (digitalRead(getInput1) == HIGH) {
-        send_signal(led1);
-        send_signal(led2);
+        digitalWrite(led1, HIGH);
+        delaySecond(1);
+        digitalWrite(led2, HIGH);
+        delaySecond(1);
+
+        digitalWrite(led1, LOW);
+        digitalWrite(led2, LOW);
     } else if (digitalRead(getInput2) == HIGH) {
-      	send_signal(led2);
-      	send_signal(led1);
+      	digitalWrite(led2, HIGH);
+        delaySecond(1);
+        digitalWrite(led1, HIGH);
+        delaySecond(1);
+
+        digitalWrite(led2, LOW);
+        digitalWrite(led1, LOW);
     }
 
     /* Homeworks
@@ -32,10 +42,4 @@ void loop() {
 
 void delaySecond(int second) {
     delay(1000 * second);
-}
-
-void send_signal(int led) {
-    digitalWrite(led, HIGH);
-    delaySecond(1);
-    digitalWrite(led, LOW);
 }
