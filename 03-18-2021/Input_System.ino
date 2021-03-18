@@ -25,6 +25,7 @@ void loop() {
 
         digitalWrite(led1, LOW);
         digitalWrite(led2, LOW);
+        delaySecond(1);
     } else if (digitalRead(getInput2) == HIGH) {
       	digitalWrite(led2, HIGH);
         delaySecond(1);
@@ -33,6 +34,7 @@ void loop() {
 
         digitalWrite(led2, LOW);
         digitalWrite(led1, LOW);
+        delaySecond(1);
     }
 
     /* Homeworks
