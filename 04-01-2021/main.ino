@@ -18,7 +18,19 @@ void loop() {
     delay(500);
 
     analogWrite(setRed, 0);
+    analogWrite(setBlue, 0);
+    analogWrite(setGreen, 0);
+
+    delay(500);
+
+    analogWrite(setRed, 0);
     analogWrite(setBlue, 255);
+    analogWrite(setGreen, 0);
+
+    delay(500);
+
+    analogWrite(setRed, 0);
+    analogWrite(setBlue, 0);
     analogWrite(setGreen, 0);
 
     delay(500);
@@ -28,8 +40,10 @@ void loop() {
     analogWrite(setGreen, 255);
 
     delay(500);
-}
 
-void sleepSecond(int timing) {
-    delay(1000 * timing);
+    analogWrite(setRed, 0);
+    analogWrite(setBlue, 0);
+    analogWrite(setGreen, 0);
+
+    delay(500);
 }
