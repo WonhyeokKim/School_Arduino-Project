@@ -16,12 +16,18 @@ void loop() {
     int value = random(100) % 3;
     Serial.println(getValue(value));
 
-    if (value == 0) {
-        runLed(led1, 500);
-    } else if (value == 1) {
-        runLed(led2, 500);
-    } else {
-        runLed(led3, 500);
+    switch (value) {
+        case 0:
+            runLed(led1, 500);
+            break;
+        
+        case 1:
+            runLed(led2, 500);
+            break;
+
+        case 2:
+            runLed(led3, 500);
+            break;
     }    
 }
 
