@@ -9,23 +9,20 @@ void setup() {
 
     randomSeed(analogRead(A0));
 
-    Serial.begin(9600);
+    Serial.begin(114000);
 }
 
 void loop() {
-    int value = random(100) % 2;
-    Serial.println(getValue(2));
+    int value = random(100) % 3;
+    Serial.println(getValue(value));
 
-    switch (value) {
-        case 0:
-            runLed(led1, 500);
-        case 1:
-            runLed(led2, 500);
-        case 2:
-            runLed(led3, 500);
-    }
-
-    
+    if (value == 0) {
+        runLed(led1, 500);
+    } else if (value == 1) {
+        runLed(led2, 500);
+    } else {
+        runLed(led3, 500);
+    }    
 }
 
 void runLed(int led, int sleep) { // Milisecond
@@ -34,6 +31,6 @@ void runLed(int led, int sleep) { // Milisecond
     digitalWrite(led, LOW);
 }
 
-int getValue(int devide) {
-    return analogRead(A0) % devide;
+int getValue(int value) {
+    return value;
 }
