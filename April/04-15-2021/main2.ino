@@ -15,6 +15,7 @@ void setup() {
 void loop() {
     int value = random(100) % 3;
     Serial.println(getValue(value));
+    Serial.println(debug());
 
     switch (value) {
         case 0:
@@ -39,4 +40,8 @@ void runLed(int led, int sleep) { // Milisecond
 
 int getValue(int value) {
     return value;
+}
+
+int debug() {
+    return analogRead(A0);
 }
