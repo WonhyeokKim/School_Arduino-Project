@@ -6,13 +6,13 @@ void setup() {
   	Serial.begin(9600);
 }
 
-void loop() {	
-  	Serial.println(get_value());
-  	if (get_value() > 100) {
+void loop() {
+	Serial.println(get_value());
+	if (get_value() > 100) {
   		digitalWrite(13, HIGH);
-    } else {
-    	digitalWrite(13, LOW);
-    }
+    	} else {
+    		digitalWrite(13, LOW);
+    	}
 }
 
 int get_value() {
